@@ -9,6 +9,18 @@ jobs:
     name: Create version number
     runs-on: ubuntu-latest
     steps:
+    - name: log untrusted output
+      run: |
+
+        # disable command workflow processing
+        echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
+
+        # log untrusted output
+        echo "untrusted output"
+
+        # enable workflow command processing
+        echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
+    steps:
     - uses: actions/checkout@v1
     - name: Fetch all history for all tags and branches
       run: |
@@ -17,7 +29,6 @@ jobs:
       uses: gittools/actions/gitversion/setup@v0.9.2
       with:
           versionSpec: '5.2.x'
-          token: ${{ secrets.GH_TOKEN }}
     - name: Use GitVersion
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0.9.2
