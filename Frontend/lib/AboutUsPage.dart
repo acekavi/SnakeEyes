@@ -86,7 +86,7 @@ class aboutUsPage extends StatelessWidget {
                 ),
                 personalCard(
                   name: "K.K.C.S.Sarathchandra",
-                  path: 'assest/profilePictures/profile.jpg',
+                  path: 'assest/profilePictures/chanuthi.jpeg',
                   uowId: 'w18098547',
                   iitId: 20200969,
                   color: const Color(0xFF0C3823),

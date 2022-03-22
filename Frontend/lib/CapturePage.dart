@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class capturePage extends StatefulWidget {
   const capturePage({Key? key}) : super(key: key);
@@ -19,6 +20,20 @@ class _capturePageState extends State<capturePage> {
   File? image;
   Future pickImage(ImageSource source) async{
   try {
+    var status = await Permission.camera.status;
+
+
+    if (status.isDenied) {
+      // We didn't ask for permission yet or the permission has been denied before but not permanently.
+    }
+
+// You can can also directly ask the permission about its status.
+    if (await Permission.location.isRestricted) {
+      // The OS restricts access, for example because of parental controls.
+    }
+
+
+
     final image=await ImagePicker().pickImage(source: source);
     if(image==null) return;
     final imageTemp=File(image.path);
@@ -81,4 +96,5 @@ class _capturePageState extends State<capturePage> {
       ),
     );
   }
+  
 }

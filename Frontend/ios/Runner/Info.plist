@@ -44,6 +44,9 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 
+	<key>NSCameraUsageDescription</key>
+        <string>Explanation on why the camera access is needed.</string>
+
 
 </dict>
 </plist>
