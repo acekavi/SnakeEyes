@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:tflite/tflite.dart';
 
 class capturePage extends StatefulWidget {
   const capturePage({Key? key}) : super(key: key);
@@ -18,6 +19,10 @@ class capturePage extends StatefulWidget {
 
 class _capturePageState extends State<capturePage> {
   File? image;
+  List? _outputs;
+  String output="Be Happy " ;
+
+
   Future pickImage(ImageSource source) async{
   try {
     var status = await Permission.camera.status;
@@ -39,7 +44,11 @@ class _capturePageState extends State<capturePage> {
     final imageTemp=File(image.path);
     setState(() {
       this.image=imageTemp;
+      classifyImage(imageTemp);
+      this.output=_outputs![0].toString() ;
+      print("Out put is"+output);
     });
+
   } on PlatformException catch (e)
    {
      print("Failed to pick image $e!");
@@ -84,9 +93,23 @@ class _capturePageState extends State<capturePage> {
                     )
                     ,child: TextButton.icon(autofocus: true,onPressed: (){pickImage(ImageSource.gallery);}, label: const Text("Gallery",style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700),),icon: const Icon(FontAwesomeIcons.fileImage,color: Colors.black,),)),
               ),
-              image !=null?Image.file(image!
-              ,fit: BoxFit.cover,):const Image(image: AssetImage("assest/snakeEyeLogo.jpg"),)
 
+              image !=null?Image.file(image!
+              ,fit: BoxFit.cover,):const Image(image: AssetImage("assest/snakeEyeLogo.jpg"),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                child: Ink(
+                    decoration:BoxDecoration(
+                      gradient: const LinearGradient(colors: [const Color(0xff00b09b), const Color(0xff96c93d)]),
+                      //   border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(6),
+                    )
+                    ,child: TextButton.icon(autofocus: true,onPressed: (){
+                  this.output=_outputs![0].toString() ;
+                  print("Out put is"+output);
+                }, label: const Text("Output",style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700),),icon: const Icon(FontAwesomeIcons.fileImage,color: Colors.black,),)),
+              ),
 
 
 
@@ -96,5 +119,59 @@ class _capturePageState extends State<capturePage> {
       ),
     );
   }
+
+
+
+  bool _loading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loading = true;
+
+    loadModel().then((value) {
+      setState(() {
+        _loading = false;
+      });
+    });
+  }
+
+  loadModel() async {
+    await Tflite.loadModel(
+      model: "Frontend/assest/tensorflow/model_unquant2.tflite",
+      labels: "Frontend/assest/tensorflow/labels2.txt",
+      numThreads: 1,
+    );
+  }
+  Future classifyImage(File image) async {
+    var output = await Tflite.runModelOnImage(
+        path: image.path,
+        imageMean: 0.0,
+        imageStd: 255.0,
+        numResults: 9,
+        threshold: 0.2,
+        asynch: true
+    );
+    setState(() {
+      _loading = false;
+      _outputs = output!;
+      print("Output is :"+_outputs![0].toString());
+    });
+  }
+  @override
+  void dispose() {
+    Tflite.close();
+    super.dispose();
+  }
+  /** pickImage() async {
+      var image = await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (image == null) return null;
+      setState(() {
+      _loading = true;
+      _image = image as File;
+      });
+      classifyImage(_image);
+      } **/
+
   
 }
