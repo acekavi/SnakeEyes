@@ -33,16 +33,22 @@ class _TensorflowState extends State<Tensorflow> {
       model: "Frontend/assest/tensorflow/model_unquant.tflite",
       labels: "Frontend/assest/tensorflow/labels.txt",
       numThreads: 1,
+        isAsset: true, // defaults to true, set to false to load resources outside assets
+        useGpuDelegate: false
     );
   }
   Future classifyImage(File image) async {
-    var output = await Tflite.runModelOnImage(
-        path: image.path,
+    var output = await Tflite.detectObjectOnImage(
+        path: image.path,       // required
+        model: "YOLOv4",
         imageMean: 0.0,
         imageStd: 255.0,
-        numResults: 2,
-        threshold: 0.2,
-        asynch: true
+        threshold: 0.3,       // defaults to 0.1
+        numResultsPerClass: 2,// defaults to 5
+        // defaults to [0.57273,0.677385,1.87446,2.06253,3.33843,5.47434,7.88282,3.52778,9.77052,9.16828]
+        blockSize: 32,        // defaults to 32
+        numBoxesPerBlock: 5,  // defaults to 5
+        asynch: true          // defaults to true
     );
     setState(() {
       _loading = false;
