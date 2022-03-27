@@ -6,8 +6,10 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 
@@ -25,10 +27,28 @@ class SnakeActivity : AppCompatActivity() {
         var scientific_name=intent.getStringExtra("SCIENTIFIC_NAME")
         var description=intent.getStringExtra("DESCRIPTION")
 
+
      var toxicityLabel=findViewById<TextView>(R.id.toxiclabel)
         var sciName=findViewById<TextView>(R.id.scie_name)
         var Snakefamily=findViewById<TextView>(R.id.snakeName)
         var snake_Desc=findViewById<TextView>(R.id.desc_text)
+        var label=findViewById<CardView>(R.id.card_toxiclabel)
+
+
+
+        if(toxicity.toString().equals("HIGHLY-VENOMOUS")){
+            label.getBackground().setTint(Color.parseColor("#FB6767"))
+
+        }
+        else if(toxicity.toString().equals("NON-VENOMOUS")){
+            label.getBackground().setTint(Color.parseColor("#90EE90"))
+        }
+        else{
+            label.getBackground().setTint(Color.parseColor("#FFBA4B"))
+        }
+
+        var image = findViewById(R.id.snakeImage) as ImageView
+        image.setImageResource(R.drawable.commonkrait);
 
 
 
