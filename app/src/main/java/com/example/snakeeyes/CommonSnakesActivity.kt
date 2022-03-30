@@ -8,12 +8,19 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 
 class CommonSnakesActivity : AppCompatActivity() {
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common_snakes)
+
+        var nav_home=findViewById<BottomNavigationItemView>(R.id.navigation_home)
+        var nav_capture=findViewById<BottomNavigationItemView>(R.id.navigation_capture)
+        var nav_snakes=findViewById<BottomNavigationItemView>(R.id.navigation_snakes)
+
+        setNavBar(nav_home,nav_capture,nav_snakes)
 
         var cobraButton=findViewById<Button>(R.id.cobra_button)
         cobraButton.setOnClickListener {
@@ -33,6 +40,22 @@ class CommonSnakesActivity : AppCompatActivity() {
 
 
     }
+
+    private fun setNavBar(navHome: BottomNavigationItemView, nav_capture: BottomNavigationItemView, navSnakes: BottomNavigationItemView) {
+        navHome.setOnClickListener {
+         intent=Intent(this,MenuActivity::class.java)
+            startActivity(intent)
+        }
+        nav_capture.setOnClickListener {
+            intent=Intent(this,CaptureActivity::class.java)
+            startActivity(intent)
+        }
+        navSnakes.setOnClickListener {
+            intent=Intent(this,CommonSnakesActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     override fun onStart() {
         super.onStart()
         var cobraProgress =findViewById<ProgressBar>(R.id.cobra_progressbar)

@@ -5,11 +5,11 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="Home" />
         <item
-            android:id="@+id/navigation_sms"
-            android:icon="@drawable/ic_baseline_home_24"
-            android:title="SMS" />
+            android:id="@+id/navigation_capture"
+            android:icon="@drawable/ic_baseline_camera_24"
+            android:title="Capture" />
         <item
-            android:id="@+id/navigation_notifications"
-            android:icon="@drawable/ic_baseline_home_24"
-            android:title="Notification" />
+            android:id="@+id/navigation_snakes"
+            android:icon="@drawable/ic_baseline_view_headline_24"
+            android:title="Snakes" />
 </menu>
