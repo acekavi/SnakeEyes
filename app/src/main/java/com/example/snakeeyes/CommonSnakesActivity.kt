@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView
 class CommonSnakesActivity : AppCompatActivity() {
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common_snakes)
 
@@ -89,10 +90,10 @@ class CommonSnakesActivity : AppCompatActivity() {
     }
 
     fun setprogressBar(progressBar: ProgressBar,limit:Int){
-        var handler=Handler()
+      //  var handler=Handler()
         progressBar.visibility=View.VISIBLE
-        var i=progressBar.progress
-        Thread(Runnable {
+        progressBar.progress=limit
+      /**  Thread(Runnable {
             while (i<limit){
                 i++
                 handler.post(Runnable {
@@ -106,7 +107,7 @@ class CommonSnakesActivity : AppCompatActivity() {
                 }
 
             }
-        }).start()
+        }).start() **/
 
     }
 }
