@@ -32,7 +32,7 @@ exports.addSnakes = function(req, res){
 //view snakes from db
 exports.viewSnakes = async function(req, res){ 
     const snakeid = req.body.snakeid;
-
+    //const snakeid = "6240348dc92dc4ffbd9386da"
     Snake.findById(snakeid).then(function(foundSnake){
         if(foundSnake._id == snakeid){
             res.status(200).send({

@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security"
         android:theme="@style/Theme.SnakeEyes">
         <activity
             android:name=".SnakeActivity"
@@ -43,6 +44,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 
+    // permission to use internet and access network state
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>
