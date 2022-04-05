@@ -40,6 +40,7 @@ class CommonSnakesActivity : AppCompatActivity() {
 
         setNavBar(nav_home,nav_capture,nav_snakes)
 
+        //creating instances of see more buttons for snakes
         var cobraButton=findViewById<Button>(R.id.cobra_button)
         var commonKraitButton = findViewById<Button>(R.id.commonkrait_button);
         var humpNosedPitViperButton = findViewById<Button>(R.id.humpNosedPitViper_button);
@@ -50,8 +51,9 @@ class CommonSnakesActivity : AppCompatActivity() {
         var indianRockPythonButton = findViewById<Button>(R.id.indianRockPython_button);
         var commonSandBoaButton = findViewById<Button>(R.id.commonSandBoa_button);
 
+        //functionality for Cobra, See More button
         cobraButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62401ff856d67da73d2bbbbe\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62401ff856d67da73d2bbbbe\"}";               // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -59,12 +61,24 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+
+                // Here(Line no:68-72) I added more detail other than
+                // FAMILY,SCIENTIFIC_NAME...ect,
+                // DESHAL please add fields to this details. N delete this comment
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62401ff856d67da73d2bbbbe");
                 startActivity(it)
             };
         };
 
+        //functionality for Common Krait, See More button
         commonKraitButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62403239bc4ea173bbc6296b\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62403239bc4ea173bbc6296b\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -72,12 +86,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62403239bc4ea173bbc6296b");
                 startActivity(it)
             };
         };
 
+        //functionality for HumpNosed PitViper, See More button
         humpNosedPitViperButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62403383c92dc4ffbd9386d6\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62403383c92dc4ffbd9386d6\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -85,12 +107,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62403383c92dc4ffbd9386d6");
                 startActivity(it)
             };
         };
 
+        //functionality for RatSnake, See More button
         ratSnakeButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62403414c92dc4ffbd9386d8\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62403414c92dc4ffbd9386d8\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -98,12 +128,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62403414c92dc4ffbd9386d8");
                 startActivity(it)
             };
         };
 
+        //functionality for Russellas Viper, See More button
         russellasViperButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"6240348dc92dc4ffbd9386da\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"6240348dc92dc4ffbd9386da\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -111,12 +149,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "6240348dc92dc4ffbd9386da");
                 startActivity(it)
             };
         };
 
+        //functionality for SawScaled Viper, See More button
         sawScaledViperButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62403516c92dc4ffbd9386dc\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62403516c92dc4ffbd9386dc\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -124,12 +170,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62403516c92dc4ffbd9386dc");
                 startActivity(it)
             };
         };
 
+        //functionality for Green Tree Vine Snake, See More button
         greenTreeVineButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"6240359bc92dc4ffbd9386de\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"6240359bc92dc4ffbd9386de\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -137,12 +191,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "6240359bc92dc4ffbd9386de");
                 startActivity(it)
             };
         };
 
+        //functionality for Indian RockPython, See More button
         indianRockPythonButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62403620c92dc4ffbd9386e0\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"62403620c92dc4ffbd9386e0\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -150,12 +212,20 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "62403620c92dc4ffbd9386e0");
                 startActivity(it)
             };
         };
 
+        //functionality for Common SandBoa, See More button
         commonSandBoaButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"624036a8c92dc4ffbd9386e2\"}";                             // id of the snake
+            var snakeId = "{\"snakeid\":\"624036a8c92dc4ffbd9386e2\"}";                // id of the snake
 
             intent= Intent(this,SnakeActivity::class.java).also {
                 sendRequest(snakeId);
@@ -163,10 +233,18 @@ class CommonSnakesActivity : AppCompatActivity() {
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
+                it.putExtra("NAME", name);
+                it.putExtra("SIZE", size);
+                it.putExtra("WEIGHT", weight);
+                it.putExtra("GENUS", genus);
+                it.putExtra("COLOR", color);
+                it.putExtra("VENOM_TYPE", venomType)
+                it.putExtra("SNAKEID", "624036a8c92dc4ffbd9386e2");
                 startActivity(it)
             };
         };
     }
+
 
     private fun setNavBar(navHome: BottomNavigationItemView, nav_capture: BottomNavigationItemView, navSnakes: BottomNavigationItemView) {
         navHome.setOnClickListener {
@@ -242,11 +320,11 @@ class CommonSnakesActivity : AppCompatActivity() {
 
         val snakeId = snakeIdString;                                                                // id of the snake as a string
 
-        val rq = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), snakeId);       // create request body
+        val rq = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), snakeId); // create request body
 
         // build the request
         val request = Request.Builder()
-            .url("http://192.168.8.143:8000/api/view_snakes")
+            .url("http://172.16.1.35:8000/api/view_snakes")
             .method("POST", rq)
             .header("Content-Type", "application/json")
             .build();

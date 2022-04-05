@@ -87,7 +87,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae"
+                        />
 
                     <Button
                         android:id="@+id/cobra_button"
@@ -192,7 +193,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Bungarus Caeruleus \nFamily  :                     Elapidae" />
 
                     <Button
                         android:id="@+id/commonkrait_button"
@@ -297,7 +298,7 @@
                         android:layout_width="match_parent"
                         android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Hypnale Hypnale \nFamily  :                     Viperidae" />
 
                     <Button
                         android:id="@+id/humpNosedPitViper_button"
@@ -402,7 +403,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Aesculapian Snake \nFamily  :                     Colubridae" />
 
                     <Button
                         android:id="@+id/ratSnake_button"
@@ -507,7 +508,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Daboia Russelii \nFamily  :                     Viperidae" />
 
                     <Button
                         android:id="@+id/russellasViper_button"
@@ -612,7 +613,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Echis Carinatus \nFamily  :                     Viperidae" />
 
                     <Button
                         android:id="@+id/sawScaledViper_button"
@@ -716,7 +717,8 @@
                         android:id="@+id/text_greenTreeVine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:textColor="@color/black"
+                        android:text="Scientific Name  :    Ahaetulla Nasuta \nFamily  :                     Colubridae" />
 
                     <Button
                         android:id="@+id/greenTreeVine_button"
@@ -820,7 +822,8 @@
                         android:id="@+id/text_indianRockPython"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:textColor="@color/black"
+                        android:text="Scientific Name  :    Python Molurus \nFamily  :                     Pythonidae" />
 
                     <Button
                         android:id="@+id/indianRockPython_button"
@@ -925,7 +928,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Scientific Name  :    Naja Naja \nFamily  :                     Elapidae" />
+                        android:text="Scientific Name  :    Gongylophis Conicus \nFamily  :                     Boidae" />
 
                     <Button
                         android:id="@+id/commonSandBoa_button"
