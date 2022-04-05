@@ -479,15 +479,8 @@
         </androidx.cardview.widget.CardView>
 
         <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="50dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>
@@ -496,7 +489,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        android:background="#FF173518"
+        android:background="@color/dark_green"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigation_menu"

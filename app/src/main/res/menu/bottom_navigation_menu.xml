@@ -12,5 +12,4 @@
             android:id="@+id/navigation_snakes"
             android:icon="@drawable/ic_baseline_view_headline_24"
             android:title="Snakes" />
-
 </menu>
