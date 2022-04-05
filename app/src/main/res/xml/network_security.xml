@@ -7,5 +7,6 @@
         <domain includeSubdomains="true">172.20.10.3</domain>
         <domain includeSubdomains="true">192.168.1.11</domain>
         <domain includeSubdomains="true">172.16.1.35</domain>
+        <domain includeSubdomains="true">snake-eyes-api.herokuapp.com</domain>
     </domain-config>
 </network-security-config>

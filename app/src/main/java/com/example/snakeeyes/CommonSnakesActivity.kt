@@ -53,18 +53,14 @@ class CommonSnakesActivity : AppCompatActivity() {
 
         //functionality for Cobra, See More button
         cobraButton.setOnClickListener {
-            var snakeId = "{\"snakeid\":\"62401ff856d67da73d2bbbbe\"}";               // id of the snake
+            var snakeId = "{\"snakeid\":\"62401ff856d67da73d2bbbbe\"}";                // id of the snake
 
+            sendRequest(snakeId);
             intent= Intent(this,SnakeActivity::class.java).also {
-                sendRequest(snakeId);
                 it.putExtra("FAMILY", family);
                 it.putExtra("SCIENTIFIC_NAME", scientificName);
                 it.putExtra("TOXICITY", type);
                 it.putExtra("DESCRIPTION", desc);
-
-                // Here(Line no:68-72) I added more detail other than
-                // FAMILY,SCIENTIFIC_NAME...ect,
-                // DESHAL please add fields to this details. N delete this comment
                 it.putExtra("NAME", name);
                 it.putExtra("SIZE", size);
                 it.putExtra("WEIGHT", weight);
@@ -324,7 +320,8 @@ class CommonSnakesActivity : AppCompatActivity() {
 
         // build the request
         val request = Request.Builder()
-            .url("http://172.16.1.35:8000/api/view_snakes")
+            .url("http://172.20.10.3:8000/api/view_snakes")
+            //.url("http://snake-eyes-api.herokuapp.com/api/view_snakes")
             .method("POST", rq)
             .header("Content-Type", "application/json")
             .build();
