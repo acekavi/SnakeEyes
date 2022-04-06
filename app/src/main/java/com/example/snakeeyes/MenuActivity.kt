@@ -26,7 +26,7 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
         capture.setOnClickListener {
-            intent= Intent(this,MapsActivity::class.java)
+            intent= Intent(this,CaptureActivity::class.java)
             startActivity(intent)
         }
         firstaid.setOnClickListener {

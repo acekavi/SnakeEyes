@@ -43,6 +43,17 @@
             android:src="@drawable/firstaid_dont"/>
 
 
+        <Button
+            android:id="@+id/mapButton"
+             android:layout_height="30dp"
+            android:layout_width="60dp"/>
+
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="80dp"/>
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     </ScrollView>
@@ -51,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        android:background="@color/black"
+        android:background="#FF173518"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigation_menu"

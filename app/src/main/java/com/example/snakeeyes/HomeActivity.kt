@@ -26,12 +26,12 @@ class HomeActivity : AppCompatActivity() {
 
         Thread(Runnable {
             while (i<100){
-                i += 2
+                i += 1
                 handler.post(Runnable {
                     progressBar.progress=i
                 })
 
-                if( i==98){
+                if( i==99){
                     intent= Intent(this,MenuActivity::class.java)
                     startActivity(intent)
                     finish()
