@@ -43,12 +43,6 @@
             android:src="@drawable/firstaid_dont"/>
 
 
-        <Button
-            android:id="@+id/mapButton"
-             android:layout_height="30dp"
-            android:layout_width="60dp"/>
-
-
         <Space
             android:layout_width="10dp"
             android:layout_height="80dp"/>
@@ -57,6 +51,22 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mapButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="100dp"
+
+
+        android:background="@drawable/ic_baseline_map_24"
+        app:backgroundTint="?attr/colorPrimaryVariant"
+        app:backgroundTintMode="add"
+        app:fabSize="mini"
+        app:layout_anchorGravity="right"
+        app:srcCompat="@drawable/ic_baseline_map_24" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
