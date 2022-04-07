@@ -8,7 +8,6 @@ import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
-import com.example.snakeeyes.databinding.ActivityMaps2Binding
 import com.example.snakeeyes.databinding.ActivityMapsBinding
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient

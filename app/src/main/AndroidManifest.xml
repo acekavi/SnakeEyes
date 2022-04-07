@@ -29,12 +29,9 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="${MAPS_API_KEY}" />
 
-        <activity
-            android:name=".MapsActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_maps2" />
+
         <activity
             android:name=".MapsActivity"
             android:exported="false"
@@ -89,5 +86,9 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
+
+    // permission to use internet and access network state
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 </manifest>
