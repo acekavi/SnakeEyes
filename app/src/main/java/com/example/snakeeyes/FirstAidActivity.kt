@@ -75,6 +75,7 @@ class FirstAidActivity : AppCompatActivity() {
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
+
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         //  super.onRequestPermissionsResult(requestCode, permissions, grantResults)
