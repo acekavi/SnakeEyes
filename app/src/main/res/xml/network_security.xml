@@ -9,4 +9,5 @@
         <domain includeSubdomains="true">172.16.1.35</domain>
         <domain includeSubdomains="true">snake-eyes-api.herokuapp.com</domain>
     </domain-config>
+    <base-config cleartextTrafficPermitted="true"/>
 </network-security-config>

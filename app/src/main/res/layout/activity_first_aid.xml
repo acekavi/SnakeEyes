@@ -31,6 +31,42 @@
             android:text="Any time a person has been bitten by a confirmed or suspected poisonous snake, the injury should be treated as a medical emergency. While awaiting emergency medical care, there are first aid measures that should be taken." />
 
         <ImageView
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left"
+            android:src="@drawable/suwasariya_logo"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+
+                android:id="@+id/map_button2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/green"
+                android:drawableBottom="@drawable/ic_baseline_add_location_24"
+                android:text="Find Nearby Hospital" />
+
+            <Button
+
+                android:id="@+id/call_button"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/orange"
+                android:drawableBottom="@drawable/ic_baseline_add_location_24"
+                android:text="Contact Suwasariya" />
+
+        </LinearLayout>
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/firstaid_do"
@@ -43,9 +79,36 @@
             android:src="@drawable/firstaid_dont"/>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3.2dp"
+                android:background="@color/green"
+               />
+
+            <ImageButton
+
+                android:id="@+id/mosButton"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="right"
+                android:scaleType="centerInside"
+                android:src="@drawable/mos" />
+
+
+
+
+        </LinearLayout>
+
+
         <Space
             android:layout_width="10dp"
-            android:layout_height="80dp"/>
+            android:layout_height="92dp"/>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
