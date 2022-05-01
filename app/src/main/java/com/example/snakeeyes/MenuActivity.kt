@@ -12,10 +12,14 @@ class MenuActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(R.layout.activity_menu)
 
+
+
         var nav_home=findViewById<BottomNavigationItemView>(R.id.navigation_home)
         var nav_capture=findViewById<BottomNavigationItemView>(R.id.navigation_capture)
         var nav_snakes=findViewById<BottomNavigationItemView>(R.id.navigation_snakes)
 
+
+        setNavBar(nav_home,nav_capture,nav_snakes)
         var commonsnakes=findViewById<Button>(R.id.commonSnakes)
         var capture=findViewById<Button>(R.id.capture)
         var firstaid=findViewById<Button>(R.id.firstAid)
