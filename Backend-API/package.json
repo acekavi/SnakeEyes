@@ -4,7 +4,7 @@
   "description": "CyberKnights API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Saumya Kumarasinghe",
   "license": "ISC",
@@ -18,6 +18,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
   }
 }

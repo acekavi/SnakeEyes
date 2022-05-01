@@ -312,16 +312,17 @@ class CommonSnakesActivity : AppCompatActivity() {
 
     // function to send the request via the service
     private fun sendRequest(snakeIdString: String){
-        val client = OkHttpClient();                                                                // create instance of okhttp client
+        val client = OkHttpClient();                                                                            // create instance of okhttp client
 
-        val snakeId = snakeIdString;                                                                // id of the snake as a string
+        val snakeId = snakeIdString;                                                                            // id of the snake as a string
 
-        val rq = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), snakeId); // create request body
+        val rq = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), snakeId);         // create request body
 
         // build the request
         val request = Request.Builder()
-            .url("http://172.20.10.3:8000/api/view_snakes")
-            //.url("http://snake-eyes-api.herokuapp.com/api/view_snakes")
+            //.url("http://localhost:8000/api/view_snakes")                                                     // localhost URL
+            //.url("http://172.20.10.3:8000/api/view_snakes")                                                   // uni wifi
+            .url("http://192.168.8.143:8000/api/view_snakes")                                               // saumya's home wifi
             .method("POST", rq)
             .header("Content-Type", "application/json")
             .build();
