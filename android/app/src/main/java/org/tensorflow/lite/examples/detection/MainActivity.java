@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
-import android.content.ContextWrapper;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -18,7 +17,6 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -35,8 +33,6 @@ import org.tensorflow.lite.examples.detection.tflite.Classifier;
 import org.tensorflow.lite.examples.detection.tflite.YoloV4Classifier;
 import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -61,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         captureButton=findViewById(R.id.cameraButton);
         galleryButton=findViewById(R.id.galleryButton);
         imageView = findViewById(R.id.imageView);
-
         imageView.setAdjustViewBounds(true);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
@@ -104,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
         detectButton.setOnClickListener(v -> {
             Handler handler = new Handler();
 
-//            this.sourceBitmap = Utils.getBitmapFromAsset(MainActivity.this, "/data/user/0/org.tensorflow.lite.examples.detection/app_imageDir/detect.jpg");
-
             this.cropBitmap = Utils.processBitmap(capturedPhoto, TF_OD_API_INPUT_SIZE);
 
             this.imageView.setImageBitmap(cropBitmap);
@@ -123,29 +116,29 @@ public class MainActivity extends AppCompatActivity {
             }).start();
 
         });
+
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(photo);
             capturedPhoto = photo;
-//            saveToInternalStorage(photo);
 
         }
         if(resultCode == Activity.RESULT_OK)
-            switch (requestCode){
-                case 250:
-                    Uri selectedImage = data.getData();
-                    try {
-                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
-                        imageView.setImageBitmap(bitmap);
-                        capturedPhoto=bitmap;
-                    } catch (IOException e) {
-                        Log.i("TAG", "Some exception " + e);
-                    }
-                    break;
+            if (requestCode == 250) {
+                Uri selectedImage = data.getData();
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+                    imageView.setImageBitmap(bitmap);
+                    capturedPhoto = bitmap;
+                } catch (IOException e) {
+                    Log.i("TAG", "Some exception " + e);
+                }
             }
+
     }
 
     private static final Logger LOGGER = new Logger();
@@ -240,4 +233,11 @@ public class MainActivity extends AppCompatActivity {
         trackingOverlay.postInvalidate();
         imageView.setImageBitmap(bitmap);
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.setComponent(new ComponentName("com.example.snakeeyes","com.example.snakeeyes.MenuActivity"));
+        startActivity(intent);
+    }
+
 }
