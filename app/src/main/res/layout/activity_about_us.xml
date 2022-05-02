@@ -108,14 +108,14 @@
                         android:id="@+id/dimuth_iit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IIT ID    :  xxxxx"
+                        android:text="IIT ID    :  2019711"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/dimuth_uow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Uow ID : xxxxx"
+                        android:text="Uow ID : w1810201"
                         android:textColor="@color/black" />
 
                     <Space
@@ -280,14 +280,14 @@
                         android:id="@+id/avishka_iit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IIT ID    :  xxxxxxxx"
+                        android:text="IIT ID    :  2019149 "
                         android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/avishka_uow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Uow ID : xxxxxxx"
+                        android:text="Uow ID : w1810195"
                         android:textColor="@color/black" />
 
                     <Space
@@ -365,14 +365,14 @@
                         android:id="@+id/chanuthi_iit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IIT ID    :  xxxxxxxx"
+                        android:text="IIT ID    :   20200099 "
                         android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/chanuthi_uow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Uow ID : xxxxxxx"
+                        android:text="Uow ID : w1809854"
                         android:textColor="@color/black" />
 
                     <Space
@@ -386,7 +386,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Computer Science"
+                        android:text="Software Engineering"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -450,14 +450,14 @@
                         android:id="@+id/saumya_iit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IIT ID    :  xxxxxxxx"
+                        android:text="IIT ID    :  20191250"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/saumya_uow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Uow ID : xxxxxxx"
+                        android:text="Uow ID : w1810569"
                         android:textColor="@color/black" />
 
                     <Space
@@ -471,7 +471,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Computer Science"
+                        android:text="Software Engineering"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -485,6 +485,9 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="50dp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>
@@ -493,7 +496,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        android:background="@color/black"
+        android:background="#FF173518"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigation_menu"

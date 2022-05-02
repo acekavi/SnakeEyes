@@ -43,9 +43,6 @@
                 android:foregroundGravity="center"
                 app:cardBackgroundColor="@color/white"
 
-
-
-
                 app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +62,7 @@
                     android:foregroundGravity="center"
                     android:gravity="center"
                     android:textSize="16dp"
-                    android:text="Highly-venomous"
+                    android:hint="snake type"
                     android:textColor="@color/black" />
             </androidx.cardview.widget.CardView>
 
@@ -73,7 +70,7 @@
 
             <TextView
                 android:id="@+id/snakes_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="1dp"
@@ -81,9 +78,9 @@
                 android:fontFamily="@font/carter_one"
                 android:foregroundGravity="center"
                 android:gravity="center"
-                android:text="Cobra"
+                android:hint="Name Of Snake"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="20sp"/>
 
         </LinearLayout>
 
@@ -108,7 +105,7 @@
                     android:fontFamily="@font/monda_bold"
                     android:foregroundGravity="center"
                     android:gravity="center_vertical"
-                    android:text="scientific name :"
+                    android:text=" Scientific Name : "
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -122,7 +119,7 @@
                     android:fontFamily="@font/charm_bold"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="xxxxxxxxxxxx"
+                    android:hint=" scientific name "
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -150,11 +147,12 @@
                     android:fontFamily="@font/monda_bold"
                     android:foregroundGravity="center"
                     android:gravity="center_vertical"
-                    android:text=" | Family :"
+                    android:text="     |  Family : "
                     android:textColor="@color/black"
                     android:textSize="14sp" />
+
                 <TextView
-                    android:id="@+id/snakeName"
+                    android:id="@+id/snakeFamilyName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -163,20 +161,275 @@
                     android:fontFamily="@font/charm_bold"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="xxxxxxxxxxxx"
+                    android:hint=" snake family "
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snake_genus_labl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/monda_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center_vertical"
+                    android:text=" Genus :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/snke_genus"
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/charm_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:hint="snake genus"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:minWidth="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/snake_size_label"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/monda_bold"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:text=" Average Size : "
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/snkeSize"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/charm_bold"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:hint=" average size "
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:minWidth="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snake_weight_lbel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/monda_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center_vertical"
+                    android:text=" Average Weight : "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/snakWeight"
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/charm_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="left"
+                    android:hint=" average weight "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:minWidth="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snake_color_labl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/monda_bold"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:text=" Color Of Snake : "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/snakeColr"
+                    android:layout_width="278dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/charm_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:hint=" color of snake "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:minWidth="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snake_venom_typ_labl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/monda_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center_vertical"
+                    android:text=" Venom Type : "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/snakeVenomTyp"
+                    android:layout_width="292dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/charm_bold"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:hint=" snake venom type "
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:minWidth="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/monda_bold"
+            android:foregroundGravity="center"
+            android:gravity="center_vertical"
+            android:text="  Description "
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
         <TextView
             android:id="@+id/desc_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+            android:hint="                                                  snake description "
+            android:textColor="@color/black" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 </ScrollView>
