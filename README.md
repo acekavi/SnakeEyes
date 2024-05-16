@@ -1,2 +1,68 @@
-# SnakeEyes-Final
-App to identify snake species in Sri Lanka using real time machine learning models integrated with Kotlin using tensorflow lite
+#!/bin/bash
+
+# Writing README.md content to a file
+
+cat <<EOL > README.md
+# SnakeEyes
+
+## Overview
+SnakeEyes is a collaborative project that utilizes the YOLOv4 model for real-time object detection. The backend is built with TensorFlow in Python, and the frontend is developed using Flutter. The project involves contributions from five developers.
+
+## Features
+- Real-time object detection using YOLOv4
+- TensorFlow-based backend
+- Flutter-based frontend
+- High accuracy and performance
+
+## Technologies
+- YOLOv4
+- TensorFlow
+- Python
+- Flutter
+
+## Installation
+1. Clone the repository:
+   git clone https://github.com/acekavi/SnakeEyes.git
+   cd SnakeEyes
+
+2. Install backend dependencies:
+   pip install -r requirements.txt
+
+3. Install frontend dependencies:
+   cd frontend
+   flutter pub get
+
+## Usage
+### Running the Backend
+Navigate to the backend directory and start the server:
+   cd backend
+   python server.py
+
+### Running the Frontend
+Navigate to the frontend directory and start the Flutter application:
+   cd frontend
+   flutter run
+
+## File Structure
+- backend/: Contains the TensorFlow backend code.
+  - models/: Pre-trained YOLOv4 models.
+  - utils/: Utility scripts for data processing and model evaluation.
+  - server.py: Main backend server script.
+  - requirements.txt: Python dependencies.
+- frontend/: Contains the Flutter frontend code.
+  - lib/: Flutter application code.
+  - assets/: Images and other static assets.
+  - pubspec.yaml: Flutter dependencies.
+- README.md: This file.
+- CONTRIBUTING.md: Guidelines for contributing to the project.
+- LICENSE.md: License information.
+
+## Contributors
+curl -s https://api.github.com/repos/acekavi/SnakeEyes/contributors | jq -r '.[].login' | while read username; do echo "- [\$username](https://github.com/\$username)"; done
+
+## Contributing
+Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+EOL
