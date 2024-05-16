@@ -58,7 +58,10 @@ Navigate to the frontend directory and start the Flutter application:
 - LICENSE.md: License information.
 
 ## Contributors
-curl -s https://api.github.com/repos/acekavi/SnakeEyes/contributors | jq -r '.[].login' | while read username; do echo "- [\$username](https://github.com/\$username)"; done
+- [Avishka](https://github.com/acekavi)
+- [Deshal](https://github.com/Deshal-001)
+- [Rehan](https://github.com/rehan-fp)
+- [Saumya](https://github.com/saumyaakumarasinghe)
 
 ## Contributing
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
